@@ -1,4 +1,10 @@
 {{> header}}
 
 <h1>Página HOME</h1>
-<p>Usuario logado: {{userInfo.name}}</p>
+
+{{#posts}}
+    <h3><a href="/post/{{slug}}">{{title}}</a></h3>
+    <p>{{body}}</p>
+    <a href="/post/{{slug}}/edit">[ editar ]</a>
+    <hr />
+{{/posts}}
